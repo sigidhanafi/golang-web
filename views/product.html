@@ -1,0 +1,7 @@
+{{ template "layout" .}}
+
+{{ define "main" }}
+    {{ range .content }}
+        - {{ . }} <br />
+    {{ end }}
+{{ end }}

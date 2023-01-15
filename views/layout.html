@@ -1,0 +1,31 @@
+{{ define "layout" }}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ .title }}</title>
+    </head>
+    <body>
+        <div>
+            <p>HEADER</p>
+            <hr />
+            <br />
+            <br />
+            <br />
+        </div>
+        
+        <div>
+            {{ template "main" .}}
+        </div>
+
+        <div>
+            <br />
+            <br />
+            <br />
+            <hr />
+            <p>FOOTER</p>
+        </div>
+    </body>
+</html>
+
+{{ end }}
