@@ -11,6 +11,7 @@ func main() {
 
 	log.Println("Start listening port :8080")
 
+	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("Assets"))))
 	mux.HandleFunc("/", handler.HomeHanlder)
 	mux.HandleFunc("/products", handler.ProductListHandler)
 
